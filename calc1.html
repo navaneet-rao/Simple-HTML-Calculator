@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Calculator</title>
+    <style>
+      body {
+        background-color: #f4f0e8;
+        font-family: sans-serif;
+        font-weight: normal;
+      }
+      h1 {
+        text-align: center;
+      }
+      .formstyle {
+        width: 500px;
+        height: 100vh;
+        margin: auto;
+        border: none;
+        padding: 20px;
+      }
+      input {
+        width: 96px;
+        height: 96px;
+        background-color: #f0e3a6;
+        color: rgb(0, 0, 0);
+        border: none;
+        border-radius: 50%;
+        padding: 26px;
+        margin: 0 12px;
+        font-size: 28px;
+      }
+      #answer {
+        width: 422px;
+        height: 60px;
+        border-radius: 30px;
+        outline: none;
+        text-align: right;
+        font-size: 40px;
+      }
+      #clear {
+        width: 218px;
+        height: 96px;
+        border: none;
+        border-radius: 30px;
+        padding: 20px;
+        background-color: #3a3934;
+        color: azure;
+      }
+      #equal {
+        background-color: #3a3934;
+        color: azure;
+      }
+      #button:hover {
+        background-color: #a79d62 !important;
+        cursor: pointer;
+      }
+      #button:active {
+        background-color: rgb(255, 121, 121) !important;
+      }
+      #clear:hover {
+        background-color: #a79d62 !important;
+        cursor: pointer;
+      }
+      #equal:hover {
+        background-color: #a79d62 !important;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Basic Calculator</h1>
+    <div class="formstyle">
+      <form name="form1">
+        <input id="answer" type="text" name="answer" /> <br />
+        <br />
+        <input
+          type="button"
+          value="Clear All"
+          onclick="form1.answer.value = ' ' "
+          id="clear"
+        />
+        <input
+          type="button"
+          id="button"
+          value="del"
+          onclick="form1.answer.value = form1.answer.value.substring(0, form1.answer.value.length - 1)"
+        />
+        <input type="button" id="button" value="/" onclick="form1.answer.value += '/' " />
+        <br />
+        <br />
+        <input type="button" id="button" value="1" onclick="form1.answer.value += '1' " />
+        <input type="button" id="button" value="2" onclick="form1.answer.value += '2' " />
+        <input type="button" id="button" value="3" onclick="form1.answer.value += '3' " />
+        <input type="button" id="button" value="+" onclick="form1.answer.value += '+' " />
+        <br />
+        <br />
+        <input type="button" id="button" value="4" onclick="form1.answer.value += '4' " />
+        <input type="button" id="button" value="5" onclick="form1.answer.value += '5' " />
+        <input type="button" id="button" value="6" onclick="form1.answer.value += '6' " />
+        <input type="button" id="button" value="-" onclick="form1.answer.value += '-' " />
+        <br />
+        <br />
+        <input type="button" id="button" value="7" onclick="form1.answer.value += '7' " />
+        <input type="button" id="button" value="8" onclick="form1.answer.value += '8' " />
+        <input type="button" id="button" value="9" onclick="form1.answer.value += '9' " />
+        <input type="button" id="button" value="*" onclick="form1.answer.value += '*' " />
+        <br />
+        <br />
+        <input type="button" id="button" value="0" onclick="form1.answer.value += '0' " />
+        <input type="button" id="button" value="00" onclick="form1.answer.value += '00' " />
+        <input type="button" id="button" value="." onclick="form1.answer.value += '.' " />
+        <input
+          id="equal"
+          type="button"
+          value="="
+          onclick="form1.answer.value = eval(form1.answer.value) "
+        />
+        <br />
+      </form>
+    </div>
+  </body>
+</html>
